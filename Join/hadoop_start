@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-/usr/local/hadoop/bin/hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar \
- -files mapper.py,reducer.py \
- -input join_data.txt \
- -output output/ \
- -inputformat org.apache.hadoop.mapred.KeyValueTextInputFormat \
- -mapper mapper.py \
- -reducer reducer.py
-
